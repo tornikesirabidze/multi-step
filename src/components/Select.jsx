@@ -1,9 +1,10 @@
 import React from 'react'
 
 function Select() {
+
   return (
     <div>
-        <p className='bg-black'>sdfsdfsdfsfsd</p>
+        <p className='bg-red'>SELECT</p>
       
     </div>
   )
