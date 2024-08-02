@@ -1,8 +1,9 @@
 import React, { useContext } from 'react'
 import { Desbar } from '../assets'
-import { navbar } from '../constants'
+import { navbar  } from '../constants'
 import Button from './Button'
 import { IndexContext } from '../App'
+import NavBtn from './NavBtn'
 
 function Navbar() {
     
@@ -12,7 +13,7 @@ function Navbar() {
     const handleMove=(index)=>{
         setMove(index)
     }
-    console.log(move)
+    // console.log(move)
     
     
 
@@ -32,7 +33,8 @@ function Navbar() {
                         </div>
 
                     </ul>
-                ))}
+                ))} 
+                
 
             </div>
         </div>

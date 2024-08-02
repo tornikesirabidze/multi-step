@@ -4,3 +4,4 @@ import {default as Dns} from "./Dns";
 import {default as Summary} from "./Summary";
 import {default as Navbar} from "./Navbar";
 import {default as button} from "./Button";
+import {default as NavBtn} from "./NavBtn";
