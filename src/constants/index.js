@@ -1,4 +1,4 @@
-import { Advanced, Arcade, Pro } from "../assets"
+import { Advanced, Arcade, Check, Pro } from "../assets"
 
 export const navbar = [
 
@@ -36,54 +36,62 @@ export const InfoText =[
     }
 ]
 
-
-
-
-export const SelectText = [
+export const selectText=[
     {
         h3:"Select your plan",
         p:"you have th option of monthly or year billing.",
-
-    },
-    {
-        img:Arcade,
-        p:"Arcade",
-        p:"$9/mo"
-    },
-    {
-        img:Advanced,
-        p:"Advanced",
-        p:"$12/mo"
-    },
-    {
-
-        img:Pro,
-        p:"Pro",
-        p:"$15/mo"
     }
 ]
 
 
-export const OnsctText = [
+export const SelectDiv = [
+
     {
-        h3:"Pick add-ons",
-        p:"Add-ons help enhance your gaming experience.a",
-
-
+        img:Arcade,
+        span:"Arcade",
+        money:"$9/mo"
     },
     {
+        img:Advanced,
+        span:"Advanced",
+        money:"$12/mo"
+    },
+    {
+
+        img:Pro,
+        span:"Pro",
+        money:"$15/mo"
+    }
+    
+]
+
+export const OnsctText =[
+    {
+        h3:"Pick add-ons",
+        pm:"Add-ons help enhance your gaming experience.a",
+
+
+    }
+]
+
+export const OnsctDiv = [
+
+    {
+        img:Check,
         p:"Online service",
-        p:"Access to multiplayer games",
+        p1:"Access to multiplayer games",
         span:"+$1/mo"
     },
     {
+        img:Check,
         p:"Larger storage",
-        p:"Extra 1TB of cloud save",
+        p1:"Extra 1TB of cloud save",
         span:"+$2/mo"
     },
     {
+        img:Check,
         p:"Customizable Profile",
-        p:"Custom theme on your profile",
+        p1:"Custom theme on your profile",
         span:"+$2/mo"
     }
 ]
@@ -94,5 +102,26 @@ export const SummaryText = [
         p:"Double-check everything looks OK before confirming.",
 
 
+    }
+]
+export const SummaryDiv = [
+
+    {
+        h4:"Arcade(Monthly)",
+        u:"change",
+        money0:"$9/mo",
+
+    },
+    {
+        span:"Online service",
+        money:"+$1/mo",
+        span1:"Larger storage",
+        money1:"+$2/mo",
+
+    },
+    {
+        total:"Total (per month)",
+        tomoney:"$12/mo",
+ 
     }
 ]
