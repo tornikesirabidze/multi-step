@@ -13,7 +13,7 @@ export const IndexContext = createContext()
 function App() {
 
 
-    const [move, setMove] = useState(0)
+    const [move, setMove] = useState(2)
     let movepage = <Info></Info>
     if (move === 1) {
         movepage = <Select />

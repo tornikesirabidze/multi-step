@@ -66,6 +66,13 @@
   color: var(--color--990);
 }
 
+/* bg-color */
+.primary-color--bg--400{
+  background-color: var(--color--400);
+  color: var(--color--100);
+  transition: all 300ms ease-in;
+}
+
 .nav-main {
   display: flex;
   justify-content: start;
@@ -132,8 +139,7 @@ input {
   margin-top: 1rem;
   width: full;
   height: 80px;
-  border: solid 1.5px var(--color--200);
-  border-radius: 10px;
+
   justify-content: end;
   align-items: center;
   padding-right: 2rem;
@@ -141,6 +147,11 @@ input {
   
   
 }
+.dnsdiv--border{
+  border: solid 1.5px var(--color--200);
+  border-radius: 10px;
+}
+
 .dnsdiv2{
   display: flex;
   flex-direction: column;
@@ -198,4 +209,11 @@ hr{
 }
 .back{
   color: var(--color--600);
+}
+
+.main--btn:hover .nav--btn {
+  background-color: var(--color--400);  
+  color: var(--color--100);
+  transition: all 100ms ease-in;
+
 }
