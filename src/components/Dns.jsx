@@ -27,7 +27,7 @@ function Dns() {
                 {OnsctDiv.map((item, index) => (
                     <div onClick={() => adonChanger(index)} className={`dnsdiv ${adon.includes(index)&&"dnsdiv--border"}`}>
                         <div className='dnsdiv3'>
-                            <img src={OnsctDiv[index].img} alt=""  />
+                            {adon.includes(index)&&<img src={OnsctDiv[index].img} alt="" className='img-dns w-[29px] h-[29px]' />}
                         </div>
                         <div className='dnsdiv2'>
                             <p className='font-bold primary-color--100'>{OnsctDiv[index].p}</p>

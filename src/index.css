@@ -167,7 +167,15 @@ input {
   align-items: center;
   width: 30px;
   height: 30px;
-  background: var(--color--200);
+  /* background: var(--color--200); */
+  border-radius: 5px;
+  border: solid 0.1px;
+
+
+}
+.img-dns{
+  background-color: var(--color--200);
+  object-fit:none;
   border-radius: 5px;
 
 }
