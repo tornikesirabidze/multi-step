@@ -7,13 +7,20 @@ import Select from './components/Select'
 import Dns from './components/Dns'
 import Summary from './components/Summary'
 import NavBtn from './components/NavBtn'
+import { selectText } from './constants'
 export const IndexContext = createContext()
 
 
 function App() {
 
 
-    const [move, setMove] = useState(2)
+    const [mainObj, setMainObj] = useState(
+        {
+            name:true,
+            isanimation:true
+        }
+    )
+    const [move, setMove] = useState(1)
     let movepage = <Info></Info>
     if (move === 1) {
         movepage = <Select />
@@ -27,9 +34,10 @@ function App() {
 
 
 
+
     return (
 
-        <IndexContext.Provider value={[move, setMove]}>
+        <IndexContext.Provider value={[move, setMove, mainObj, setMainObj]}>
 
             <div className='flex justify-center items-center h-[100vh] flex-col bg-gre'>
                 <div className='nav-main flex '>
