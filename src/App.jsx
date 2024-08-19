@@ -16,11 +16,15 @@ function App() {
 
     const [mainObj, setMainObj] = useState(
         {
+            id:0,
             name:true,
-            isanimation:true
+            isanimation:true,
+            title:"Arcade",
+            money:"$9/mo"
         }
+        
     )
-    const [move, setMove] = useState(1)
+    const [move, setMove] = useState(3)
     let movepage = <Info></Info>
     if (move === 1) {
         movepage = <Select />

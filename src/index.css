@@ -121,7 +121,7 @@ input {
 
 .seldiv{
   width: 150px;
-  height: 200px;
+
   border: solid 1px rgba(117, 116, 116, 0.162);
   border-radius: 8px;
   display: flex;

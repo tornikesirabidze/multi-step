@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { SelectDiv, selectText } from '../constants'
 import { IndexContext } from '../App'
 
@@ -8,13 +8,21 @@ function Select() {
     const [seldiv, setSeldiv] = useState([0])
     const [move, setMove, mainObj, setMainObj] = useContext(IndexContext)
 
-    
+
+
+
     const selectDiv = (index) => {
         let activearr = [seldiv]
+        let updateobj = { ...mainObj }
+        updateobj.id = index
+        updateobj.money = mainObj.name ? SelectDiv[mainObj.id].money : SelectDiv[mainObj.id].year
         activearr.push(index)
+        setMainObj(updateobj)
         setSeldiv(activearr)
-        console.log(activearr)
+        // console.log(activearr)
+        console.log(updateobj.id)
     }
+
 
 
     const handleSwitch = () => {
@@ -22,6 +30,8 @@ function Select() {
             let updateobj = { ...mainObj }
             updateobj.name = true
             updateobj.isanimation = true
+            updateobj.money = mainObj.name ? SelectDiv[mainObj.id].money : SelectDiv[mainObj.id].year
+
             setMainObj(updateobj)
             console.log(mainObj)
             console.log(mainObj.isanimation)
@@ -29,6 +39,8 @@ function Select() {
             let updateobj = { ...mainObj }
             updateobj.name = false
             updateobj.isanimation = false
+            updateobj.money = mainObj.name ? SelectDiv[mainObj.id].money : SelectDiv[mainObj.id].year
+
             setMainObj(updateobj)
             console.log(mainObj)
 
@@ -47,7 +59,7 @@ function Select() {
                         <img src={SelectDiv[index].img} alt="" />
                         <p className='mt-[3rem] font-semibold primary-color--100'>{SelectDiv[index].span}</p>
                         <p className=' primary-color--600'> {mainObj.name ? SelectDiv[index].money : SelectDiv[index].year}</p>
-                        {!mainObj.name && <p className='font-sans primary-color--100 relative'>2 months free</p>}
+                        {!mainObj.name ? <p className='font-sans primary-color--100 relative'>2 months free</p> : undefined}
                     </div>
                 ))}
             </div>
