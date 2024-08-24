@@ -4,7 +4,7 @@ import { IndexContext } from '../App'
 
 function Summary() {
 
-    const [move, setMove, mainObj, setMainObj] = useContext(IndexContext)
+    const [move, setMove, mainObj, setmainObj] = useContext(IndexContext)
 
 
 
@@ -16,7 +16,7 @@ function Summary() {
             <div className='mt-[3rem]'>
                 <div className='sumdiv'>
                     <div className='sumdiv2 '>
-                        <p className='text-lg font-bold primary-color--100'>{mainObj.title + `(${mainObj.name ? "Monthly" : "yearli"})`}</p>
+                        <p className='text-lg font-bold primary-color--100'>{mainObj[0].title + `(${mainObj[0].name ? "Monthly" : "yearli"})`}</p>
                         <span className='primary-color--600'>{"dsaa"}</span>
                         <span className='primary-color--600'>{"ds"}</span>
                         <u className='primary-color--600'>{"ds"}</u>
@@ -25,10 +25,10 @@ function Summary() {
                     </div>
 
                     <div >
-                        <p className='font-bold text-lg primary-color--100'>{mainObj.name ? mainObj.money: mainObj.money}</p>
-                        <p>{mainObj.name ? "ds" : "ds"}</p>
-                        <p>{mainObj.name ? "ds" : "ds"}</p>
-                        <p className='text-xl font-extrabold primary-color--200'>{mainObj.name ? "ds" : "ds"}</p>
+                    <p className='font-bold text-lg primary-color--100'>{mainObj[0].name ? mainObj[0].money : mainObj[0].money}</p>
+                        <p>{mainObj[0].name ? "ds" : "ds"}</p>
+                        <p>{mainObj[0].name ? "ds" : "ds"}</p>
+                        <p className='text-xl font-extrabold primary-color--200'>{mainObj[0].name ? "ds" : "ds"}</p>
 
                     </div>
                 </div>

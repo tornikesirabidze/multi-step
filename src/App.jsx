@@ -14,17 +14,31 @@ export const IndexContext = createContext()
 function App() {
 
 
-    const [mainObj, setMainObj] = useState(
+    const [mainObj, setMainObj] = useState([
         {
-            id:0,
-            name:true,
-            isanimation:true,
-            title:"Arcade",
-            money:"$9/mo"
+            id: 0,
+            name: true,
+            isanimation: true,
+            title: "Arcade",
+            money: "$9/mo",
+
+        },
+        {
+            id: 0,
+            onlineService: null,
+            largerStorage: null,
+            custumPro: null,
+            arr:[]
+
         }
-        
+
+    ]
+
     )
-    const [move, setMove] = useState(3)
+
+
+
+    const [move, setMove] = useState(2)
     let movepage = <Info></Info>
     if (move === 1) {
         movepage = <Select />
