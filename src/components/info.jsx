@@ -3,7 +3,7 @@ import { InfoText } from '../constants'
 
 function Info() {
     return (
-        <div className='bg-white ml-[3rem] w-[450px] h-[500px] mb-[2rem]'>
+        <div className='bg-white ml-[3rem] w-[] h-[500px] mb-[2rem]'>
 
             <div className='flex flex-col gap-2'>
                 <h3 className='text-3xl font-bold primary-color--100'>{InfoText[0].h3}</h3>

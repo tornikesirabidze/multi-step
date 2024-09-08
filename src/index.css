@@ -73,14 +73,20 @@
   transition: all 300ms ease-in;
 }
 
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
 .nav-main {
   display: flex;
   justify-content: start;
   align-items: center;
-
-  height: 700px;
-  width: 1000px;
   border: red;
+  padding-bottom: 25px;
   background-color: var(--color--990);
   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 
@@ -92,9 +98,8 @@
 }
 
 .nav-bg {
-  width: 350px;
+  width: 300px;
   background: url("./assets/main/desktop.svg") no-repeat;
-  background-size: contain;
   background-position: center;
   height: 600px;
   border-radius: 15px;
@@ -240,3 +245,19 @@ hr{
 
 }
 
+/* ////// */
+
+
+@media (max-width: 640px){
+
+
+  .nav-bg {
+    background: url("./assets/main/mobile.svg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    height: 150px;
+    width: 100%;
+  }
+  
+}

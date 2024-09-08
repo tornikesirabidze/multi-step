@@ -14,9 +14,6 @@ function Dns() {
         
         
         
-        
-        
-        
         if (updateobj[1].arr.indexOf(index) == -1) {
             updateobj[1].arr.push(index)
             

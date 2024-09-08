@@ -28,7 +28,9 @@ function App() {
             onlineService: null,
             largerStorage: null,
             custumPro: null,
-            arr:[]
+            arr: [],
+
+
 
         }
 
@@ -38,7 +40,7 @@ function App() {
 
 
 
-    const [move, setMove] = useState(2)
+    const [move, setMove] = useState(0)
     let movepage = <Info></Info>
     if (move === 1) {
         movepage = <Select />
@@ -56,19 +58,19 @@ function App() {
     return (
 
         <IndexContext.Provider value={[move, setMove, mainObj, setMainObj]}>
+            <div>
+                <div className='flex justify-center relative items-center  bg-gre'>
+                    <div className='nav-main flex sm:flex-row flex-col '>
+                        <Navbar />
+                        <div className=' bottom-0 right-[120px] '>
+                            {movepage}
+                            <NavBtn />
+                        </div>
+                    </div>
 
-            <div className='flex justify-center items-center h-[100vh] flex-col bg-gre'>
-                <div className='nav-main flex '>
-                    <Navbar />
-                    {movepage}
+
+
                 </div>
-
-                <div className='absolute mt-[30rem] ml-[14.5rem]'>
-
-                    <NavBtn />
-                </div>
-
-
             </div>
 
         </IndexContext.Provider>
