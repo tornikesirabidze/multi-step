@@ -59,10 +59,10 @@ function App() {
 
         <IndexContext.Provider value={[move, setMove, mainObj, setMainObj]}>
             <div>
-                <div className='flex justify-center relative items-center  bg-gre'>
-                    <div className='nav-main flex sm:flex-row flex-col '>
+                <div className='flex justify-center  relative items-center  bg-gre'>
+                    <div className='nav-main h-[100vh] w-[] flex sm:flex-row flex-col '>
                         <Navbar />
-                        <div className=' bottom-0 right-[120px] '>
+                        <div className=' mt-[-2rem]  bottom-0 right-[120px] '>
                             {movepage}
                             <NavBtn />
                         </div>

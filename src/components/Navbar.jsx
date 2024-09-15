@@ -28,15 +28,15 @@ function Navbar() {
 
     return (
 
-        <div>
+        <div className='sm:w-[330px] w-[100%]'>
 
-            <div className='nav-bg flex justify-center text-center'>
+            <div className='nav-bg flex justify-center  text-center'>
                 <div className='mt-[10px] flex sm:flex-col flex-row mr-[2rem]'>
                     {navbar.map((item, index) => (
                         <ul onClick={() => handleMove(index)} className=' main--btn flex mt-[5px] cursor-pointer w-full items-center justify-start '>
                             <Button className={move == index && "primary-color--bg--400"}>{index + 1}</Button>
 
-                            <div className=''>
+                            <div className='sm:block hidden '>
                                 <li className='step  mt-[1.5rem]'>{item.li}</li>
                                 <li className='text-white'>{item.h4}</li>
                             </div>
