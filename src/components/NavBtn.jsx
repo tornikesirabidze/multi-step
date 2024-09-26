@@ -22,7 +22,7 @@ function NavBtn() {
     
     }
     return (
-        <div className='navbtn flex justify-between items-center  '>
+        <div className='navbtn bg-white  flex justify-between items-center  '>
             <button onClick={()=>pageDown(next)} className=' back w-[120px] h-[45px]  '>Go Back</button>
             <button onClick={()=>pageMove(next)} className='next w-[120px] h-[45px] bg-black '>Next Step</button>
         </div>

@@ -70,22 +70,22 @@ export const SelectDiv = [
     {
         img: Arcade,
         span: "Arcade",
-        money: "$9/mo",
-        year:"$90/yr"
+        money: "9",
+        year:"90"
     },
     {
         img: Advanced,
         span: "Advanced",
-        money: "$12/mo",
-        year:"$120/yr"
+        money: "12",
+        year:"120"
 
     },
     {
 
         img: Pro,
         span: "Pro",
-        money: "$15/mo",
-        year:"$150/yr"
+        money: "15",
+        year:"150"
 
     }
 
@@ -106,23 +106,23 @@ export const OnsctDiv = [
         img: Check,
         p: "Online service",
         p1: "Access to multiplayer games",
-        span: "+$1/mo",
-        year:"+$10/yr"
+        span: "+1",
+        year:"+10"
     },
     {
         img: Check,
         p: "Larger storage",
         p1: "Extra 1TB of cloud save",
-        span: "+$2/mo",
-        year:"+$20/yr"
+        span: "+2",
+        year:"+20"
 
     },
     {
         img: Check,
         p: "Customizable Profile",
         p1: "Custom theme on your profile",
-        span: "+$2/mo",
-        year:"+$20/yr"
+        span: "+2",
+        year:"+20"
 
     }
 ]
@@ -140,24 +140,24 @@ export const SummaryDiv = [
     {
         h4: "Arcade(Monthly)",
         u: "change",
-        money0: "$9/mo",
-        year: "$9/yr",
+        money0: "9",
+        year: "9",
 
     },
     {
         span: "Online service",
-        money: "+$1/mo",
+        money: "+1",
         span1: "Larger storage",
-        money1: "+$2/mo",
-        year1: "$10/yr",
-        year2: "$20/yr",
+        money1: "+2",
+        year1: "10",
+        year2: "20",
 
 
     },
     {
         total: "Total (per month)",
-        tomoney: "$12/mo",
-        tomoneyyr: "$120/yr",
+        tomoney: "12",
+        tomoneyyr: "120",
 
 
     }

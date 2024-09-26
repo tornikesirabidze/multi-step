@@ -82,6 +82,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  background: var(--color--700);
 }
 
 .nav-main {
@@ -98,6 +99,10 @@ body {
 
 
 
+}
+
+.main-app {
+  background-color: var(--color--700);
 }
 
 .nav-bg {
@@ -140,7 +145,6 @@ input {
   margin-top: 2rem;
   cursor: pointer;
   transition: all 50ms;
-
 }
 
 .select--div {
@@ -192,7 +196,7 @@ input {
   justify-content: center;
   align-items: center;
   width: 30px;
-  height: 30px;
+  height: 25px;
   /* background: var(--color--200); */
   border-radius: 5px;
   border: solid 0.1px;
@@ -232,7 +236,10 @@ hr {
   border-color: red;
 }
 
-.navbtn {}
+.navbtn {
+  padding: 1rem;
+  border-radius: 10px;
+}
 
 
 
@@ -271,7 +278,23 @@ hr {
   .nav-main {
     width: 100vw;
     margin-top: -1.5rem;
+    background-color: var(--color--700);
+    box-shadow: none;
 
+
+  }
+
+  .seldiv {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+
+  }
+
+  body {
+    align-items: start;
+    justify-content: start;
   }
 
 }

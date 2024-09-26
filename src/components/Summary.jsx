@@ -10,7 +10,7 @@ function Summary() {
 
 
     return (
-        <div className='bg-white ml-[3rem]  rounded-lg p-[2rem] w-[480px] h-[500px] mb-[2rem] '>
+        <div className='bg-white rounded-lg p-[2rem] h-[450px] flex flex-col justify-start mb-[2rem] '>
             <h3 className='text-3xl font-bold primary-color--100'>{SummaryText[0].h3}</h3>
             <p className='primary-color--600'>{SummaryText[0].p}</p>
             <div className='mt-[3rem]'>
@@ -20,7 +20,7 @@ function Summary() {
                         <span className='primary-color--600'>{mainObj[1].arr.includes(0)&& OnsctDiv[0].p}</span>
                         <span className='primary-color--600'>{mainObj[1].arr.includes(1)&& OnsctDiv[1].p}</span>
                         <span className='primary-color--600'>{mainObj[1].arr.includes(2)&& OnsctDiv[2].p}</span>
-                        <p className='primary-color--600'>{"ds"}</p>
+                        <p className='primary-color--600'>{"Total"}</p>
 
                     </div>
 
@@ -29,7 +29,7 @@ function Summary() {
                         <p>{mainObj[1].arr.includes(0) && mainObj[0].name ? OnsctDiv[0].span : mainObj[1].arr.includes(0) && OnsctDiv[0].year}</p>
                         <p>{mainObj[1].arr.includes(1) && mainObj[0].name ? OnsctDiv[1].span : mainObj[1].arr.includes(1) && OnsctDiv[1].year}</p>
                         <p>{mainObj[1].arr.includes(2) && mainObj[0].name ? OnsctDiv[1].span : mainObj[1].arr.includes(2) && OnsctDiv[2].year}</p>
-                        <p className='text-xl font-extrabold primary-color--200'>{mainObj[0].name ? "ds" : "ds"}</p>
+                        <p className='text-xl font-extrabold primary-color--200'>{mainObj[0].name ? eval(OnsctDiv[0].p + OnsctDiv[1].p +OnsctDiv[3].p + SummaryText[0].p) : "ds"}</p>
 
                     </div>
                 </div>

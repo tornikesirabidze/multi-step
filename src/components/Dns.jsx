@@ -40,12 +40,12 @@ function Dns() {
     
     
     return (
-        <div className='bg-white ml-[3rem] rounded-lg p-[2rem] w-[480px] h-[500px] mb-[2rem]'>
+        <div className='bg-white w-full  rounded-lg p-[2rem] mb-[2rem]'>
             <h3 className='text-3xl font-bold primary-color--100'>{OnsctText[0].h3}</h3>
             <p className='primary-color--600'>{OnsctText[0].pm}</p>
-            <div className='mt-[3rem]  '>
+            <div className='mt-[3rem] '>
                 {OnsctDiv.map((item, index) => (
-                    <div onClick={() => adonChanger(index)} className={`dnsdiv cursor-pointer ${mainObj[1].arr.includes(index) && "dnsdiv--border"}`}>
+                    <div onClick={() => adonChanger(index)} className={`dnsdiv cursor-pointer ${mainObj[1].arr.includes(index) && "dnsdiv--border"} pl-6`}>
                         <div className='dnsdiv3'>
                             {mainObj[1].arr.includes(index) && <img src={OnsctDiv[index].img} alt="" className='img-dns w-[29px] h-[29px]' />}
                         </div>

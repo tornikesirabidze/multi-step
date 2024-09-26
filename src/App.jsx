@@ -20,7 +20,7 @@ function App() {
             name: true,
             isanimation: true,
             title: "Arcade",
-            money: "$9/mo",
+            money: "9",
 
         },
         {
@@ -58,18 +58,26 @@ function App() {
     return (
 
         <IndexContext.Provider value={[move, setMove, mainObj, setMainObj]}>
-            <div>
-                <div className='flex justify-center  relative items-center  bg-gre'>
-                    <div className='nav-main h-[100vh] w-[] flex sm:flex-row flex-col '>
+            <div >
+                <div className='flex justify-center  relative items-center '>
+                    <div className='nav-main  flex sm:flex-row flex-col '>
                         <Navbar />
-                        <div className=' mt-[-2rem]  bottom-0 right-[120px] '>
+                        <div className=' mt-[-2rem] max-w-[450px]  right-[120px] '>
                             {movepage}
-                            <NavBtn />
+                            <div className='max-sm:hidden '>
+                                <NavBtn />
+
+                            </div>
                         </div>
                     </div>
 
 
 
+                </div>
+                <div className='sm:hidden w-full absolute bottom-0 '>
+
+
+                    <NavBtn />
                 </div>
             </div>
 
