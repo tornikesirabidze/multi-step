@@ -25,19 +25,19 @@ function App() {
         },
         {
             id: 0,
-            onlineService: null,
-            largerStorage: null,
-            custumPro: null,
+            onlineService: "+0",
+            largerStorage: "+0",
+            custumPro: "+0",
             arr: [],
 
 
 
         }
-
     ]
+    
+)
 
-    )
-
+console.log(mainObj)
 
 
     const [move, setMove] = useState(0)
