@@ -7,8 +7,7 @@ function Summary() {
     const [move, setMove, mainObj, setmainObj] = useContext(IndexContext)
 
     const handlesummer = () => {
-        let sum = ""
-        sum += mainObj[0]["money"]
+        let sum = 0
         // for (let i in mainObj[1]) {
         //     if (mainObj[1][i] != null && i !== "id" && i !== "arr") {
 
@@ -18,20 +17,15 @@ function Summary() {
         for (let i of mainObj[1]["arr"]) {
             for (let word in mainObj[1]) {
                 if (word !== "id" && word !== "arr") {
-                    console.log(word)
-                    if (mainObj[1]["arr"].includes([1])) {
-                        sum += eval(`${mainObj[1][word]}*-1`)
-                    }
-                    else {
-                        sum += mainObj[1][word]
-                    }
+                        sum = Number(mainObj[1]["onlineService"])+Number(mainObj[1]["largerStorage"])+Number(mainObj[1]["custumPro"])+Number(mainObj[0]["money"])
+
 
                 }
             }
         }
-        console.log(eval(sum))
+        return sum
     }
-    handlesummer()
+    
 
 
 
@@ -55,7 +49,7 @@ function Summary() {
                         <p>{mainObj[1].arr.includes(0) && mainObj[0].name ? OnsctDiv[0].span : mainObj[1].arr.includes(0) && OnsctDiv[0].year}</p>
                         <p>{mainObj[1].arr.includes(1) && mainObj[0].name ? OnsctDiv[1].span : mainObj[1].arr.includes(1) && OnsctDiv[1].year}</p>
                         <p>{mainObj[1].arr.includes(2) && mainObj[0].name ? OnsctDiv[1].span : mainObj[1].arr.includes(2) && OnsctDiv[2].year}</p>
-                        <p className='text-xl font-extrabold primary-color--200'>{mainObj[0].name ? "dd" : "ds"}</p>
+                        <p className='text-xl font-extrabold primary-color--200'>{mainObj[0].name ? `$${handlesummer()}/mo` :`$${handlesummer()}/yr`}</p>
 
                     </div>
                 </div>

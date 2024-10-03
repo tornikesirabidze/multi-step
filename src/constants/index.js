@@ -1,4 +1,4 @@
-import { Advanced, Arcade, Check, Pro } from "../assets"
+import { Advanced, Arcade, Check, Pro, Thankyou } from "../assets"
 
 export const navbar = [
 
@@ -106,14 +106,14 @@ export const OnsctDiv = [
         img: Check,
         p: "Online service",
         p1: "Access to multiplayer games",
-        span: "+1",
+        span: "1",
         year:"+10"
     },
     {
         img: Check,
         p: "Larger storage",
         p1: "Extra 1TB of cloud save",
-        span: "+2",
+        span: "2",
         year:"+20"
 
     },
@@ -121,7 +121,7 @@ export const OnsctDiv = [
         img: Check,
         p: "Customizable Profile",
         p1: "Custom theme on your profile",
-        span: "+2",
+        span: "2",
         year:"+20"
 
     }

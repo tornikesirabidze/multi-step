@@ -23,11 +23,23 @@ function Dns() {
         if(mainObj[1].arr.includes(0)){
             updateobj[1].onlineService=mainObj[0].name ? OnsctDiv[0].span : OnsctDiv[0].year
         }
+        else{
+            updateobj[1].onlineService=mainObj[0].name ? 0 :0
+
+        }
         if(mainObj[1].arr.includes(1)){
             updateobj[1].largerStorage=mainObj[0].name ? OnsctDiv[1].span : OnsctDiv[1].year
         }
+        else{
+            updateobj[1].largerStorage=mainObj[0].name ? 0 :0
+
+        }
         if(mainObj[1].arr.includes(2)){
             updateobj[1].custumPro=mainObj[0].name ? OnsctDiv[2].span : OnsctDiv[2].year
+        }
+        else{
+            updateobj[1].custumPro=mainObj[0].name ? 0 : 0
+
         }
 
         setMainObj(updateobj)
@@ -53,7 +65,7 @@ function Dns() {
                             <p className='font-bold primary-color--100'>{OnsctDiv[index].p}</p>
                             <p className='primary-color--600'>{OnsctDiv[index].p1}</p>
                         </div>
-                        <span className='font-semibold primary-color--200'>{mainObj[0].name ? OnsctDiv[index].span : OnsctDiv[index].year}</span>
+                        <span className='font-semibold primary-color--200'>{mainObj[0].name ? `+$${OnsctDiv[index].span}/mo` : `+$${OnsctDiv[index].span}/yr`}</span>
                     </div>
                 ))}
             </div>

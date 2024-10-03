@@ -9,9 +9,10 @@ function NavBtn() {
     
     // console.log(move+"sd")
     const pageMove=(next)=>{
-        if(next>=0 && next<3){
+        if(next>=0 && next<4){
             setNext(next+1)
         }
+
 
     }
     const pageDown=(next)=>{
@@ -21,6 +22,8 @@ function NavBtn() {
 
     
     }
+ 
+    
     return (
         <div className='navbtn bg-white  flex justify-between items-center  '>
             <button onClick={()=>pageDown(next)} className=' back w-[120px] h-[45px]  '>Go Back</button>

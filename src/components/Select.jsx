@@ -52,7 +52,7 @@ function Select() {
                         <img src={SelectDiv[index].img} alt="" />
                         <div className=''>
                             <p className='sm:mt-[3rem] mt-[0] font-semibold primary-color--100'>{SelectDiv[index].span}</p>
-                            <p className=' primary-color--600'> {mainObj[0].name ? SelectDiv[index].money : SelectDiv[index].year}</p>
+                            <p className=' primary-color--600'> {mainObj[0].name ? `$${SelectDiv[index].money}/mo` : `$${SelectDiv[index].year}/yr`}</p>
                             {!mainObj[0].name ? <p className='font-sans primary-color--100 relative'>2 months free</p> : undefined}
                         </div>
                     </div>

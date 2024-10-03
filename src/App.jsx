@@ -8,6 +8,7 @@ import Dns from './components/Dns'
 import Summary from './components/Summary'
 import NavBtn from './components/NavBtn'
 import { selectText } from './constants'
+import Finish from './components/Finish'
 export const IndexContext = createContext()
 
 
@@ -25,9 +26,9 @@ function App() {
         },
         {
             id: 0,
-            onlineService: "+0",
-            largerStorage: "+0",
-            custumPro: "+0",
+            onlineService: "0",
+            largerStorage: "0",
+            custumPro: "0",
             arr: [],
 
 
@@ -51,6 +52,10 @@ console.log(mainObj)
     if (move === 3) {
         movepage = <Summary />
     }
+    if (move === 4) {
+        movepage = <Finish />
+        
+    }
 
 
 
@@ -65,7 +70,7 @@ console.log(mainObj)
                         <div className=' mt-[-2rem] max-w-[450px]  right-[120px] '>
                             {movepage}
                             <div className='max-sm:hidden '>
-                                <NavBtn />
+                                {move<4? <NavBtn />:undefined}
 
                             </div>
                         </div>
@@ -77,7 +82,7 @@ console.log(mainObj)
                 <div className='sm:hidden w-full absolute bottom-0 '>
 
 
-                    <NavBtn />
+                    {move<4? <NavBtn />:undefined}  
                 </div>
             </div>
 
