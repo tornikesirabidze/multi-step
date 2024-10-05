@@ -33,6 +33,12 @@ function App() {
 
 
 
+        },
+        {
+            name:"",
+            email:"",
+            number:""
+
         }
     ]
     
@@ -70,7 +76,7 @@ console.log(mainObj)
                         <div className=' mt-[-2rem] max-w-[450px]  right-[120px] '>
                             {movepage}
                             <div className='max-sm:hidden '>
-                                {move<4? <NavBtn />:undefined}
+                                {move<4 && <NavBtn />}
 
                             </div>
                         </div>

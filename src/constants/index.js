@@ -34,14 +34,14 @@ export const InfoText = [
     },
     {
         h3: "Name",
-        label: "Name",
+        label: "name",
         plHolder: "Enter your name...",
         type: "text"
 
     },
     {
         h3: "Email Address",
-        label: "Email Address",
+        label: "email",
         plHolder: "Enter email...",
         type: "Email"
 
@@ -49,7 +49,7 @@ export const InfoText = [
     },
     {
         h3: "Phone Number",
-        label: "Phone Number",
+        label: "number",
         plHolder: "Enter your number...",
         type: "number"
 

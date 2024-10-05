@@ -1,7 +1,28 @@
-import React from 'react'
+import React, { useContext, useState } from 'react'
 import { InfoText } from '../constants'
+import { IndexContext } from '../App'
 
 function Info() {
+
+    const [move, setMove, mainObj, setMainObj] = useContext(IndexContext)
+    
+    const newMainobj=[...mainObj]
+    const [formValue, setFormValue]=useState({
+        name:"",
+        email:"",
+        number:""
+    })
+    const handleOchange=(e)=>{
+        const{name,value}=e.target
+        setFormValue({...formValue,[name]:value})
+        newMainobj[2]=formValue
+        setMainObj(newMainobj)
+        
+        console.log(name)
+    }
+    
+
+
     return (
         <div className='bg-white rounded-lg p-[2rem] '>
 
@@ -14,8 +35,17 @@ function Info() {
                     (index !==0 &&
 
                     <div>
-                        <label for={item.h3} className='font-thin primary-color--100'>{[item.label]}</label>
-                        <input type={item.type} name={item.h3} id={item.h3} placeholder={item.plHolder} className='border pl-5 pr-5 w-full' />
+                        <label for={item.label} className='font-thin primary-color--100'>{[item.h3]}</label>
+                        {mainObj[2][item.label]!==""?
+                         <input 
+                         onChange={handleOchange} 
+                         value={formValue[item]}
+                        type={item.type} name={item.label} id={item.label} placeholder={item.plHolder} className='border pl-5 pr-5 w-full' />
+                         :<input 
+                         onChange={handleOchange} 
+                         value={formValue[item]}
+                        type={item.type} name={item.label} id={item.label} placeholder={item.plHolder} className='border border-red-500 pl-5 pr-5 w-full' />
+                         }
 
                     </div>
                     )
