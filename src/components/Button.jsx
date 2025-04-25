@@ -1,9 +1,4 @@
 import React, { useContext } from 'react'
-import { IndexContext } from '../App'
-import Info from './Info'
-import Select from './Select'
-import Dns from './Dns'
-import Summary from './Summary'
 
 function Button(props) {
 
