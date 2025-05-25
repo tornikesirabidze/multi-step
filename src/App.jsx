@@ -1,7 +1,7 @@
 
 import { createContext, useState } from 'react'
 import './App.css'
-import Info from './components/Info'
+import Info from './components/info'
 import Navbar from './components/Navbar'
 import Select from './components/Select'
 import Dns from './components/Dns'
